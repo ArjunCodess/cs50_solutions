@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            document.addEventListener('DOMContentLoaded', function() {
+                let feedback1 = document.querySelector('#feedback1');
+                let feedback2 = document.querySelector('#feedback2');
+
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.background = 'green';
+                    feedback1.innerHTML = 'Correct';
+                })
+
+                let incorrects = document.querySelectorAll('.incorrect');
+                incorrects.forEach(function(incorrect) {
+                    incorrect.addEventListener('click', function() {
+                        incorrect.style.background = 'red';
+                        feedback1.innerHTML = 'Incorrect';
+                    });
+                });
+
+                document.querySelector('#free_response').addEventListener('click', function () {
+                    let response = document.querySelector('#textfield');
+
+                    if (response.value === 'idk') {
+                        response.style.background = 'green';
+                        feedback2.innerHTML = 'Correct';
+                    } else {
+                        response.style.background = 'red';
+                        feedback2.innerHTML = 'Incorrect';
+                    }
+                });
+            })
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+
+                <button class="incorrect">Lorem, ipsum.</button>
+                <button class="incorrect">Lorem, ipsum.</button>
+                <button class="incorrect">Lorem, ipsum.</button>
+                <button class="correct">Lorem, ipsum.</button>
+
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+
+                <input type="text" id="textfield"></input>
+                <button id="free_response">Submit</button>
+
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+
+</html>

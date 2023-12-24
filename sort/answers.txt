@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Because it takes slightly less time when compared with sort3 on sorted text.
+
+sort2 uses: Merge Sort
+
+How do you know?: Best amongst all.
+
+sort3 uses: Selection Sort
+
+How do you know?: Because it takes more time when compared with sort1 on sorted text.

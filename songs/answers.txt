@@ -1,0 +1,8 @@
+1.sql -> Select all song names
+2.sql -> Select song names ordered by tempo
+3.sql -> Select top 5 song names ordered by duration
+4.sql -> Select names of energetic and danceable songs with high valence
+5.sql -> Calculate the average energy of all songs
+6.sql -> Select songs by a specific artist (Post Malone)
+7.sql -> Calculate the average energy of songs by a specific artist (Drake)
+8.sql -> Select songs with featuring artists
